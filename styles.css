@@ -1,0 +1,226 @@
+/* text-align: center: Horizontally centers the text inside the <p>.
+Purpose: Centers the inline content (e.g., text, inline elements) horizontally within its block-level container.
+Applicable To: Block-level containers like <div>, <p>, <h1>, etc.
+
+align-items: center: Vertically centers the <p> inside the parent <div>.
+Purpose: Centers child elements (block or inline) vertically in a container with a flexbox layout.
+Applicable To: Parent containers with display: flex or display: grid.
+What It Does: Aligns child elements along the cross-axis (vertical axis in a row layout or horizontal axis in a column layout). */
+
+/*  list-style: none ;   to avoid list vertical with bullet points to items
+text-decoration: none;    to avoid blue clickable link and underline to link text */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav, main, footer{
+    width: 100%;
+}
+
+nav{
+    background-color: #4A628A;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content :space-around;
+    position: fixed;
+}
+
+nav > h2{               /* this writing method called combinators in it not need to give classes */
+    color: white;
+}
+
+nav > ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+nav > ul >li{
+    margin: 1rem;
+}
+
+nav > ul >li >a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+/* **************************************************************************************************************************** */
+
+main{
+    background-color: #B9E5E8;
+    text-align: center;
+    padding: 5rem;
+    height:220rem
+}
+
+main > section > div>h1{
+    font-size: 3rem;
+    font-family: "DynaPuff", system-ui;
+    color: #4A628A;
+}
+
+main > section > div>p{
+    font-size: 2rem;
+    font-family: "DynaPuff", system-ui;
+    color: #4A628A;
+    text-align:left ;
+    padding: 1rem;
+    text-wrap:stable;
+}
+main > section > div>pre{
+    font-size: 2rem;
+    font-family: "DynaPuff", system-ui;
+    color: #4A628A;
+    text-align:left ;
+    padding: 3rem;
+    text-wrap:stable;
+}
+
+main > section > img{
+    width: 30rem;
+    height: 30rem;
+    border-radius: 50%;
+}
+
+
+.Rectangle {
+    width: 300px; /* Set the rectangle's width */
+    height: 300px; /* Set the rectangle's height */
+    border: 2px solid rgb(255, 255, 255); /* Optional: Add a border to define the rectangle */
+    display: flex; /* To center the image */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    overflow: hidden; /* Ensures the image doesn't overflow the rectangle */
+  }
+.image {
+    width: 400px; /* Set the rectangle's width */
+    height: 400px; /* Set the rectangle's height */
+    display: flex; /* To center the image */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    overflow: hidden; /* Ensures the image doesn't overflow the rectangle */
+  }
+  /* //////////////////////////////////////         OR  other method in down */
+  main > section > div.image img {
+    border-radius: 500%;
+    width: 200px; /* Adjust the image width */
+    height: 200px; /* Optional: Set a specific height */
+    border: 10px solid black; 
+}
+ 
+main > section{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+}
+
+main > section > div > ul {
+  
+    text-align: left;
+    font-size: 2rem;
+    font-family: "DynaPuff", system-ui;
+    color: #4A628A;
+    text-wrap:stable;
+}
+main > section > div.education > ul {
+    text-align: left;
+    font-size: 2rem;
+    font-family: "DynaPuff", system-ui;
+    color: #4A628A;
+    text-wrap:stable;
+}
+
+/* **************************************************************************************************** *********************/
+footer{
+    background-color: #81b2c7;
+    height: 8rem;
+    text-align: center;
+    
+}
+
+/*
+ footer > div {
+    display: flex;      
+    justify-content: center; 
+    gap: 25px;          
+}
+
+footer > div > svg {
+    margin: 0;  /* No need for margin when using gap */      
+
+    /* #️⃣✨THIS ALSO WRITTEN AS IN DOWNSIDE GIVEN FOR SAME */
+
+.footer-icons {
+    margin: 0 25px;/* Adds horizontal spacing */
+    display: flex;       /* Align icons horizontally */
+    justify-content: center; /* Center the icons */
+    gap: 25px;           /* Add space between icons */
+}
+
+#CoursesandInternships, #education ,#contact{
+    height: 80vh;
+    padding: 5rem;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-around;
+}
+
+div>h1{
+    font-size: 2.5rem;
+        font-family: "DynaPuff", system-ui;
+        color: #4A628A;
+}
+
+.CoursesandInternships-list{
+    list-style: none;
+    font-size: 1.5rem;
+    margin: 4rem;
+}
+
+CoursesandInternships-list > ul{
+    font-size: 1rem;
+    list-style: none;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:left;
+    font-size: larger;
+    text-align: left;
+}
+
+form > label{
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items:center;
+    text-align: left;
+}
+
+form > label > input{
+    width: 20rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+    border: none;
+    padding: 0.5rem;
+    margin: 0.5rem;
+
+}
+
+textarea{
+    border-radius: 0.5rem;
+    border: none;
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
